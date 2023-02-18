@@ -75,7 +75,43 @@ public class grupcalismasi1 {
 
     Soru 7:Verilen bir Arrayden istenen elemeneti silip kalanlari yeni bir array olarak yazdiran yeni bir method olusturun
            int arr[]={3,4,2,3,5,7,3,8,5,2,4}; silinecek element=3
-    Soru 8:Verilen bir listede tekrar eden sayilari sadece bir kere yazdiran bir mehod olusturun
+           // Soru 7:Verilen bir Arrayden istenen elemeneti silip kalanlari yeni bir array olarak yazdiran yeni bir method olusturun
+    //  int arr[]={3,4,2,3,5,7,3,8,5,2,4}; silinecek element=3
+
+    int arr[]={3,4,2,3,5,7,3,8,5,2,4};
+
+
+
+    System.out.println(Arrays.toString(isteneniSil(arr)));
+
+}
+
+
+public static int[] isteneniSil(int [] arr){
+    Scanner input = new Scanner(System.in);
+    System.out.println("lutfen silinecek degeri giriniz");
+    int silinecekElement =input.nextInt();
+    int lenght = 0;
+
+    for (int w: arr){
+        if(w!=silinecekElement){
+           lenght++;
+
+        }
+    }
+
+    System.out.println(lenght);
+     int [] brr = new int[lenght];
+     int index = 0;
+     for (int q : arr){
+         if (q!=silinecekElement){
+             brr [index] =q;
+             index++;
+         }
+     }
+     return brr;
+
+   /* Soru 8:Verilen bir listede tekrar eden sayilari sadece bir kere yazdiran bir mehod olusturun
            orn: [1,3,5,3,5,6,1,7]
            output [1,3,5,6,7]
     Soru 9:Verilen bir listede istenen iki indexdeki elementlerin yerini kalici olarak degistiren bir method olusturun
